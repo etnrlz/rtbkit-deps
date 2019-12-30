@@ -96,7 +96,7 @@ install_libssh2:
 	make install
 
 install_zookeeper:
-	cd zookeeper; \
+	cd zookeeper-1; \
 	(ulimit -v unlimited; JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ ant compile); \
 	cd src/c; \
 	autoreconf -if; \
@@ -105,7 +105,7 @@ install_zookeeper:
 	make doxygen-doc
 	install -d $(TARGET)/bin/zookeeper; \
 	rm -rf $(TARGET)/bin/zookeeper/*; \
-	cp -a zookeeper/{bin,build,conf,docs} $(TARGET)/bin/zookeeper/
+	cp -a zookeeper-1/{bin,build,conf,docs} $(TARGET)/bin/zookeeper/
 
 install_redis:
 	cd redis; \
