@@ -108,7 +108,7 @@ install_zookeeper:
 	cp -a zookeeper-1/{bin,build,conf,docs} $(TARGET)/bin/zookeeper/
 
 install_redis:
-	cd redis; \
+	cd redis-1; \
 	CXX=$(CXX) CC=$(CC) PREFIX=$(TARGET) make -j$(JOBS) -k install
 
 install_pistache:

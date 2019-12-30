@@ -31,6 +31,3 @@
 [submodule "protobuf"]
 	path = protobuf
 	url = https://github.com/protocolbuffers/protobuf
-[submodule "redis"]
-	path = redis
-	url = https://github.com/antirez/redis
