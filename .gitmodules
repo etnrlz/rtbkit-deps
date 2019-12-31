@@ -25,9 +25,6 @@
 [submodule "cairomm"]
 	path = cairomm
 	url = git://git.cairographics.org/git/cairomm
-[submodule "pistache"]
-	path = pistache
-	url = https://github.com/oktal/pistache.git
 [submodule "protobuf"]
 	path = protobuf
 	url = https://github.com/protocolbuffers/protobuf

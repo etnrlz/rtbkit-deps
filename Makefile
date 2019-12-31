@@ -115,7 +115,7 @@ install_pistache:
 	if [ \( $(GCC_MAJOR_VERSION) -gt 4 -o $(GCC_MAJOR_VERSION) -eq 4 -a $(GCC_MINOR_VERSION) -gt 6 \) -a \
 		 \( $(GXX_MAJOR_VERSION) -gt 4 -o $(GXX_MAJOR_VERSION) -eq 4 -a $(GCC_MINOR_VERSION) -gt 6 \) ]; \
 	then \
-		cd pistache; \
+		cd pistache-1; \
 		if [ -s CMakeCache.txt ]; then rm CMakeCache.txt; fi; \
 		if [ -d CMakeFiles ]; then rm -rf CMakeFiles; fi; \
 		if [ -s install_manifest.txt ]; then rm install_manifest.txt; fi; \
@@ -123,6 +123,7 @@ install_pistache:
 		if [ -s CTestTestfile.cmake ]; then rm -rf CTestTestfile.cmake; fi; \
 		if [ -s cmake_install.cmake ]; then rm cmake_install.cmake; fi; \
 		cmake -DCMAKE_INSTALL_PREFIX=$(TARGET) -DCMAKE_CXX_COMPILER=$(GXX) -DCMAKE_C_COMPILER=$(GCC); \
+		
 		make -j$(JOBS) -k install; \
 	else \
 		echo "pistache disabled"; \
